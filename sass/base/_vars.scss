@@ -1,0 +1,47 @@
+//~~~~
+
+// font-famaly
+$font-famaly-open-sans: 'Open Sans', sans-serif;
+$font-famaly-bebas-neue: 'Bebas Neue', sans-serif;
+
+// font-size
+$default-size: 18px;
+$header-menu-size: 12px;
+$button-text-size: 16px;
+$title-size: 80px;
+$subtext-size: 24px;
+$spoiler-title-size: 36px;
+$secondary-size: 14px;
+
+//colors
+$main-color: #1a1917;
+$accent-color: #ffb548;
+$secondary-color: #d9d9d9;
+$footer-bg-color: #080a0b;
+$quote-bg-color: #1b1c1d;
+$color-qoute-link: #5f6061;
+$bg-menu-burger-btn-close: #ff0000;
+
+// Image source
+$header-background-img: '../assets/path/to/image/header/header-bg.jpg';
+$feature-background-img: '../assets/path//to/image/main/features/features-bg.jpg';
+$gallery-background-img: '../assets/path//to/image/main/gallery/image-bg-2.jpg';
+$requirements-background-img: '../assets/path/to/image/main/requirements/image-bg-fullhd.jpg';
+$press-quotes-background-img: '../assets/path/to/image/main/press-quotes/image-bg.jpg';
+$footer-background-img: '../assets/path/to/image/footer/image.jpg';
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~> MEDIA <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+
+// screen-size
+$size-tablet: 960px;
+$size-tablet-secondary: 800px;
+$size-tablet-thrid: 1150px;
+$size-mobile: 480px;
+$size-mobile-secondary: 550px;
+
+// font-size
+$mobile-title-size: 30px;
+$tablet-title-size: 50px;
+
+$mobile-subtext-size: 18px;
+$tablet-subtext-size: 18px;

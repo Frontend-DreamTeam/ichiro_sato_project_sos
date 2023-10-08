@@ -1,0 +1,52 @@
+// @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@700&display=swap');
+
+// Open Sans
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+// Bebas Neue
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*::selection {
+	background: $accent-color;
+	color: $main-color;
+}
+
+body {
+	font-family: $font-famaly-open-sans;
+	font-size: $default-size;
+	background-color: $main-color;
+	scroll-behavior: smooth;
+	font-weight: 400;
+}
+
+.container {
+	max-width: 1200px;
+	margin-inline: auto;
+	height: inherit;
+
+	@include screenSize($size-tablet) {
+		max-width: 95%;
+	}
+}
+
+.button {
+	background: $accent-color;
+	padding: 18px;
+	color: $main-color;
+	border-radius: 4px;
+	font-weight: 700;
+	border: none;
+	transition: box-shadow 0.2s ease-in-out;
+
+	&:hover {
+		box-shadow: 0 0 10px $accent-color, 0 0 20px $accent-color,
+			0 0 30px $accent-color;
+	}
+}
+
+.title {
+	@include titleAndSubtext($title-size, 3px);
+}
+
+.subtext {
+	@include titleAndSubtext($subtext-size, 2px);
+}

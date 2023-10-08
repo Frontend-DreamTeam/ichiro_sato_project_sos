@@ -1,0 +1,46 @@
+//~~
+
+.swiper {
+	&__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		max-width: 600px;
+		padding: 40px 0;
+
+		// @include screenSize(1460px) {
+		// 	max-width: 500px;
+		// }
+	}
+
+	&__card {
+		width: 500px;
+		height: 600px;
+		// max-width: 100%;
+		// object-fit: fill;
+		position: relative;
+
+		// @include screenSize(1460px) {
+		// 	width: 400px !important;
+		// 	height: 500px !important;
+		// }
+	}
+
+	&-slide img {
+		width: 100%;
+		height: 100%;
+		border-radius: 10px;
+	}
+
+	&-content {
+		width: 100%;
+		overflow: hidden;
+	}
+
+	&-slide {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-right: 100px;
+	}
+}

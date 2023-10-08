@@ -1,0 +1,242 @@
+//~~
+
+.header {
+	$self: &;
+	display: grid;
+	grid-template-rows: auto 90px;
+	align-items: center;
+	@include mainBackground(
+		$header-background-img,
+		radial-gradient(
+			189.96% 61.18% at 50% 38.82%,
+			rgba(255, 181, 72, 0) 0%,
+			rgba(52, 44, 29, 0.8) 73.22%,
+			#08090a 99.74%
+		)
+	);
+
+	// .header__top
+	&__top {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 70px;
+		@include transition(background, 0.4s);
+
+		&.scroll-top-header {
+			position: fixed;
+
+			z-index: 999;
+			top: 0;
+			left: 0;
+			width: 100%;
+			backdrop-filter: blur(5px);
+			background: rgba(0, 0, 0, 0.7);
+		}
+	}
+	// .header__top--inner
+	&__top--inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	// .header__logo
+	&__logo {
+		$self-logo: &;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&-link {
+			& #{$self-logo}--img {
+				height: 55px;
+				width: 55px;
+			}
+		}
+	}
+
+	// .header__nav
+	&__nav {
+		height: 100%;
+
+		@include screenSize($size-tablet) {
+			display: none;
+		}
+	}
+	// .header__list
+	&__list {
+		display: flex;
+		align-items: center;
+		height: 100%;
+	}
+	// .header__item
+	&__item {
+		display: flex;
+		align-items: center;
+		height: 100%;
+
+		&:not(:last-child) {
+			margin-right: 22px;
+		}
+	}
+	// .header__link
+	&__link {
+		font-size: $header-menu-size;
+		text-transform: uppercase;
+		letter-spacing: 1.2px;
+		line-height: 2.5rem;
+		font-weight: 700;
+		color: $secondary-color;
+		transition: color 0.3s ease-in-out;
+
+		&:hover {
+			color: $accent-color;
+		}
+	}
+	// .header__controls
+	&__controls {
+		display: flex;
+		gap: 25px;
+	}
+	// .header__gaming-services
+	&__gaming-services {
+		display: flex;
+		gap: 18px;
+
+		@include screenSize($size-tablet) {
+			display: none;
+		}
+	}
+	// .header__xbox
+	&__xbox {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: transparent;
+		border-radius: 50%;
+		transition: box-shadow 0.2s ease-in-out;
+
+		&:hover {
+			transform: scale(1.2);
+			filter: contrast(110%);
+		}
+	}
+	// .header__xbox-ico
+	&__xbox-ico {
+	}
+	// .header__steam
+	&__steam {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: transparent;
+		border-radius: 50%;
+		transition: box-shadow 0.2s ease-in-out;
+
+		&:hover {
+			transform: scale(1.2);
+			filter: contrast(110%);
+		}
+	}
+	// .header__steam-ico
+	&__steam-ico {
+	}
+	// .header__center
+	&__center {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: $secondary-color;
+	}
+	// .header__title
+	&__title {
+		margin-bottom: 7px;
+		text-transform: uppercase;
+		font-size: $title-size;
+		font-family: $font-famaly-bebas-neue;
+		font-weight: 400;
+		letter-spacing: 5px;
+		user-select: none;
+
+		@include screenSize($size-tablet) {
+			font-size: $tablet-title-size;
+		}
+		@include screenSize($size-mobile) {
+			font-size: $mobile-title-size;
+		}
+	}
+	// .header__subtext
+	&__subtext {
+		text-transform: uppercase;
+		font-size: $subtext-size;
+		font-family: $font-famaly-bebas-neue;
+		font-weight: 400;
+		letter-spacing: 3px;
+		margin-bottom: 30px;
+		user-select: none;
+
+		@include screenSize($size-tablet) {
+			font-size: $tablet-subtext-size;
+		}
+		@include screenSize($size-mobile) {
+			font-size: $mobile-subtext-size;
+			text-align: center;
+			width: 18rem;
+		}
+	}
+	// .header__btn
+	&__btn {
+		user-select: none;
+
+		@include screenSize($size-mobile) {
+			font-size: calc($mobile-subtext-size - 1px);
+		}
+	}
+	// .header__text
+	&__text {
+		display: inline-block;
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: -10px;
+			width: 0.5px;
+			height: 100%;
+			background: $main-color;
+		}
+	}
+	// .header__cost
+	&__cost {
+		margin-left: 15px;
+	}
+	// .header__buttom
+	&__buttom {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		height: 90px;
+	}
+	// .header__scroll-down-btn
+	&__scroll-down-btn {
+		cursor: pointer;
+		background: transparent;
+		border: none;
+
+		&:hover #{$self}__scroll-down--ico {
+			animation-play-state: paused;
+		}
+	}
+	// .header__scroll-down--text
+	&__scroll-down--text {
+		margin-bottom: 10px;
+		color: $secondary-color;
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: $header-menu-size;
+	}
+	// .header__scroll-down--ico
+	&__scroll-down--ico {
+		animation: srollDownBtn 1s ease-in-out infinite;
+	}
+}
